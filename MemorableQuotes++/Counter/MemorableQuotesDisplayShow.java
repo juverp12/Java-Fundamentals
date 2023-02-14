@@ -5,8 +5,8 @@ public class MemorableQuotesDisplayShow {
 
     private MemorableQuoteDatabase memorableQuoteDatabase;
 
-    private int delayBetweenQuotes;
-    private int maxQuotesToDisplay;
+    private int delayBetweenQuotes = 3;
+    private int maxQuotesToDisplay = 0;
 
     public MemorableQuotesDisplayShow(MemorableQuoteDatabase memorableQuoteDatabase){
         this.memorableQuoteDatabase=memorableQuoteDatabase;
@@ -31,8 +31,9 @@ public class MemorableQuotesDisplayShow {
 
     public void execute(){
         int displayedquote = 0;
-        while(maxQuotesToDisplay <= 0|| displayedquote > maxQuotesToDisplay){
+        while(maxQuotesToDisplay <= 0|| displayedquote < maxQuotesToDisplay){
             MemorableQuotes quote = memorableQuoteDatabase.getRandomQuote();
+                quote.incrementPrintedCount();
                 quote.printQuote();
                 displayedquote++;
 

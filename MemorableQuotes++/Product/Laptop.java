@@ -10,7 +10,6 @@ public class Laptop extends Product{
         this.memory=memory;
 
     }
-
     public String getBrand(){
         return brand;
     }
@@ -27,7 +26,6 @@ public class Laptop extends Product{
         this.memory=memory;
 
     }
- 
     @Override
     public String toString(){
         return " Laptop: Name = "+getName()+ ", Price = "+getPrice()+ ", Brand = "+getBrand()+ ", Memory = "+getMemory();

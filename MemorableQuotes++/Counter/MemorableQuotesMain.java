@@ -9,7 +9,7 @@ public class MemorableQuotesMain {
         quotesdata.addQuote(new MemorableQuotes("If life were predictable it would cease to be life, and be without flavor", "Juver"));
         quotesdata.addQuote(new MemorableQuotes("The way to get started is to quit talking and begin doing", "James"));
         quotesdata.addQuote(new MemorableQuotes("Life is what happens when you're busy making other plans" , "Paul"));
-        quotesdata.addQuote(new MemorableQuotes("The more you give the more blessings you willreceive" , "Disney"));
+        quotesdata.addQuote(new MemorableQuotes("The more you give the more blessings you will receive" , "Disney"));
 
         if(args.length == 0) 
         {
@@ -45,18 +45,14 @@ public class MemorableQuotesMain {
                 }
                 else if (args[i].startsWith("max=")){
                     max = Integer.parseInt(args[i].substring(4));
-            } 
+                } 
+
+                MemorableQuotesDisplayShow display = new MemorableQuotesDisplayShow(quotesdata);
+                display.setdelayBetweenQuotes(delay);
+                display.setmaxQuotesToDisplay(max);
+                display.execute();
+            }
         }
-            MemorableQuotesDisplayShow display = new MemorableQuotesDisplayShow(quotesdata);
-            display.delayBetweenQuotes(delay);
-            display.maxQuotesToDisplay(max);
-            display.execute();
-        
-        }
-        else{
-            System.out.println("Error ");
-        }
-            
     }
 }
         

@@ -8,8 +8,9 @@ public class StoreMain {
         products.add(new Car("Car2", 10000.0, "Ford", "Fiesta"));
         products.add(new Laptop("Laptop1", 30000.0, "Asus", 8));
         products.add(new Laptop("Laptop2", 20000.0, "Dell", 16));
-        // products.add(new Phone("Phone1", 800.0, "Apple", "iPhone X"));
-        // products.add(new Phone("Phone2", 600.0, "Samsung", "Galaxy S10"));
+        products.add(new Shoes("Shoes1", 5000.0, "Nike", "Boots"));
+        products.add(new Shoes("Shoes2", 3500.0, "Addidas", "Slipper"));
+
 
 
         for(Product product: products){
@@ -18,8 +19,7 @@ public class StoreMain {
             }else{
             System.out.println(product.toString());
             }
-        }
-        
+        }  
     }
     
 }
